@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/npm' # Or appropriate builder for your framework
+  entrypoint: 'npm' # Or 'yarn', 'pnpm', etc.
+  args: ['install']
+- name: 'gcr.io/cloud-builders/npm' # Or appropriate builder
+  entrypoint: 'npm' # Or 'yarn', 'pnpm', etc.
+  args: ['run', 'build'] # Your build command
