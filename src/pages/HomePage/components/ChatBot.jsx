@@ -16,8 +16,11 @@ const ChatBot = () => {
         setUserInput('');
         setLoading(true); // Start loading
 
+        const backendURL = process.env.REACT_APP_BACKEND_URL;
+
         try {
-            const response = await fetch('/api/gemini-chat', {
+            // const response = await fetch('/api/gemini-chat', {
+            const response = await fetch(`${backendURL}/api/gemini-chat`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
