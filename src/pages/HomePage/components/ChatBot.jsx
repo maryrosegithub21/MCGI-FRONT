@@ -20,8 +20,9 @@ const ChatBot = () => {
 
         try {
             // const response = await fetch('/api/gemini-chat', {
-            const response = await fetch(`${backendURL}/api/gemini-chat`, {
-                
+            // const response = await fetch(`${backendURL}/api/gemini-chat`, {
+                const response = await fetch('https://mcgi-back-751732416354.us-central1.run.app/api/gemini-chat', { 
+
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
