@@ -38,6 +38,8 @@ export default function LogIn() {
     }
     const backendURL = process.env.REACT_APP_BACKEND_URL;
     console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
+    console.log("Spreadsheet ID:", process.env.REACT_APP_SPREADSHEET_ID);
+console.log("API Key:", process.env.REACT_APP_GOOGLE_API_KEY);
 
     try {
       // const response = await fetch("https://mcgi-back-751732416354.us-central1.run.app/api/login", {
