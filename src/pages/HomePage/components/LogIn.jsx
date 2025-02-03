@@ -36,9 +36,12 @@ export default function LogIn() {
       setMessageToRender("Please fill in all fields.");
       return;
     }
+    const backendURL = process.env.REACT_APP_BACKEND_URL;
 
     try {
-      const response = await fetch("http://localhost:8080/api/login", {
+      // const response = await fetch("http://localhost:8080/api/login", {
+      const response = await fetch(`${backendURL}/api/login`, {
+
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: emailLogin, password: passwordLogin, churchid: churchid }),
