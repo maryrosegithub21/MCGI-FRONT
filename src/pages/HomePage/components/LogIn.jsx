@@ -37,9 +37,10 @@ export default function LogIn() {
       return;
     }
     const backendURL = process.env.REACT_APP_BACKEND_URL;
+    console.log("Backend URL:", process.env.REACT_APP_BACKEND_URL);
 
     try {
-      // const response = await fetch("http://localhost:8080/api/login", {
+      // const response = await fetch("https://mcgi-back-751732416354.us-central1.run.app/api/login", {
       const response = await fetch(`${backendURL}/api/login`, {
 
         method: "POST",
